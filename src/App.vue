@@ -1,19 +1,26 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <ViewBox>
+      <router-view></router-view>
+    </ViewBox>
+    <HomeTabbar></HomeTabbar>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+    import HomeTabbar from "./components/HomeTabbar";
+    import {ViewBox} from 'vux'
+
+    export default {
+        name: 'app',
+        components: {HomeTabbar, ViewBox}
+    }
 </script>
 
 <style lang="less">
-@import '~vux/src/styles/reset.less';
+  @import '~vux/src/styles/reset.less';
 
-body {
-  background-color: #fbf9fe;
-}
+  body {
+    background-color: #fbf9fe;
+  }
 </style>

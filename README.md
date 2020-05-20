@@ -1,6 +1,6 @@
 # wx-ticket-h5
 
-> A Vue.js project
+> A Vue.js project，Mobile UI Components based on Vue & WeUI https://vux.li/
 
 ## Build Setup
 
