@@ -1,7 +1,21 @@
 <template>
   <div>
-    <Panel :list="list" :type="type"
-           @on-img-error="onImgError"></Panel>
+    <cell is-link value-align="left">
+      <Panel :list="list" :type="type"
+             @on-img-error="onImgError">
+      </Panel>
+    </cell>
+    <grid :show-lr-borders="false" :show-vertical-dividers="false">
+      <grid-item :label="'待结算'">
+        <x-icon slot="icon" type="ios-pie-outline"></x-icon>
+      </grid-item>
+      <grid-item :label="'已打款'">
+        <x-icon slot="icon" type="ios-pie-outline"></x-icon>
+      </grid-item>
+      <grid-item :label="'纠纷中'">
+        <x-icon slot="icon" type="ios-pie-outline"></x-icon>
+      </grid-item>
+    </grid>
     <grid :show-lr-borders="false" :show-vertical-dividers="false">
       <grid-item :label="'待审核'">
         <x-icon slot="icon" type="ios-pie-outline"></x-icon>
@@ -109,7 +123,7 @@
             Card
         },
         methods: {
-            onImgError (item, $event) {
+            onImgError(item, $event) {
                 console.log(item, $event)
             }
         },
@@ -122,7 +136,7 @@
                     fallbackSrc: 'https://imgtest.cloudbae.cn:37413/api/v1/image/test/user/head/10cd0015954e4176a0b3c5c810f96206.jpeg',
                     title: '志远',
                     desc: '男',
-                    url: '/'
+                    url: '/alipayAccount'
                 }]
             }
         }

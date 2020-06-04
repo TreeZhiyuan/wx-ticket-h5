@@ -7,19 +7,27 @@ import App from './App'
 import Home from './components/HomeTabbar'
 import CartDetails from './components/cart/CartDetails'
 import MyProfile from './components/my/MyProfile'
+import SearchHome from "./components/search/SearchHome";
+import AlipayAccount from "./components/my/AlipayAccount";
 
 Vue.use(VueRouter)
 
 const routes = [{
   path: '/',
   component: Home
-},{
+}, {
   path: '/cart',
   component: CartDetails
-},{
+}, {
   path: '/my',
-  component:MyProfile
-},]
+  component: MyProfile
+}, {
+  path: '/search',
+  component: SearchHome
+}, {
+  path: '/alipayAccount',
+  component: AlipayAccount
+}]
 
 const router = new VueRouter({
   routes

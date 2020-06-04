@@ -13,7 +13,7 @@
         <span slot="icon"><x-icon type="ios-cart"></x-icon></span>
         <span slot="label">交易</span>
       </tabbar-item>
-      <tabbar-item>
+      <tabbar-item link="/search">
         <span slot="icon"><x-icon type="search"></x-icon></span>
         <span slot="label">查询</span>
       </tabbar-item>
