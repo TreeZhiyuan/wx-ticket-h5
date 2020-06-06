@@ -8,14 +8,17 @@
       </x-input>
     </group>
     <group title="请完善通知信息" label-width="4.5em" label-margin-right="2em" label-align="right">
-      <x-input title="手机号码" name="mobile" placeholder="请输入手机号码" keyboard="number" v-model="mobile" is-type="china-mobile"></x-input>
-      <x-input title="Email" name="email" placeholder="请输入电子邮箱地址" is-type="email" v-model="email"></x-input>
+      <x-input title="手机号码" name="mobile" placeholder="请输入手机号码"
+               keyboard="number" v-model="mobile" is-type="china-mobile"></x-input>
+      <x-input title="Email" name="email" placeholder="请输入电子邮箱地址"
+               is-type="email" v-model="email"></x-input>
     </group>
     <br/>
+    <toast v-model="show8" type="text" width="15rem" text="<span style='font-size:12px'>支付宝 > 我的 > 个人信息 > 支付宝账号</span>"></toast>
     <div style="padding:0 25px;">
-      <x-button :text="submit001" style="border-radius:99px;" @click.native="processButton001" type="primary"></x-button>
+      <x-button :text="submit001" style="border-radius:99px;"
+                @click.native="processButton001" type="primary"></x-button>
     </div>
-
   </div>
 </template>
 
@@ -66,19 +69,17 @@
                 value3: '',
                 value7: '',
                 value8: '',
-                submit001: 'click me',
+                submit001: '提交',
                 time1: '2017-06-01',
                 value5: ['A'],
                 value6: [],
                 list: [['A', 'B', 'C']],
-                numberValue: 0
+                numberValue: 0,
+                show8:false
             }
         }, methods: {
             showInformation: function () {
-                console.log("dwdddddd")
-                toast.text({
-                    text: 'Hello World'
-                })
+                this.show8 = true
             },
             processButton001: function () {
 
