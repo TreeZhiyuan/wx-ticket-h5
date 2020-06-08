@@ -10,7 +10,7 @@
     <group title="请完善通知信息" label-width="4.5em" label-margin-right="2em" label-align="right">
       <x-input title="手机号码" name="mobile" placeholder="请输入手机号码"
                keyboard="number" v-model="mobile" is-type="china-mobile"></x-input>
-      <x-input title="Email" name="email" placeholder="请输入电子邮箱地址"
+      <x-input title="Email" name="email" placeholder="请输入邮箱地址"
                is-type="email" v-model="email"></x-input>
     </group>
     <br/>
